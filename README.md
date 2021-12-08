@@ -6,4 +6,4 @@ AutoHotKey program to be able to have Spanish characters on a keyboard with an E
 -Press CapsLock + vowel to get Spanish Character in lower case<br />
 -Press CapsLock + Shift + vowel to get Spanish Character in upper case<br />
 -Press CapsLock + equal sign to get inverted question mark (¿)<br />
--Press CapsLock + Shift + equal sign to get inverted exclamation mark (¿)
+-Press CapsLock + Shift + equal sign to get inverted exclamation mark (¡)
