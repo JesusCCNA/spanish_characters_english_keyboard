@@ -1,0 +1,62 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Spanish Characters using CapsLock combinations in English Keyboard and Layout
+; Press CapsLock + vowel to get Spanish Character in lower case
+; Press CapsLock + Shift + vowel to get Spanish Character in upper case
+; Press CapsLock + equal sign to get inverted question mark (¿)
+; Press CapsLock + Shift + equal sign to get inverted exclamation mark (¿)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+SetCapsLockState AlwaysOff ; prevents accidental change to capital letters
+CapsLock::Return ; prevents CapsLock from temporary shifting to capital letters
+
+; Maps the ';' to 'ñ'
+CapsLock & `;::
+If GetKeyState("Shift", "P")
+    Send {Asc 165} ;
+Else
+    Send {Asc 164}
+return
+
+; vowel mapping
+CapsLock & a::
+If GetKeyState("Shift", "P")
+    Send {Asc 0193}
+Else
+    Send {Asc 0225}
+return
+
+CapsLock & e::
+If GetKeyState("Shift", "P")
+    Send {Asc 0201}
+Else
+    Send {Asc 0233}
+return
+
+CapsLock & i::
+If GetKeyState("Shift", "P")
+    Send {Asc 0205}
+Else
+    Send {Asc 161}
+return
+
+CapsLock & o::
+If GetKeyState("Shift", "P")
+    Send {Asc 0211}
+Else
+    Send {Asc 0243}
+return
+
+CapsLock & u::
+If GetKeyState("Shift", "P")
+    Send {Asc 0218}
+Else
+    Send {Asc 0250}
+return
+
+; inverted question and exclamation mapping
+CapsLock & =::
+If GetKeyState("Shift", "P")
+    Send {Asc 0161} ; Inverted exclamation mark
+Else
+    Send {Asc 0191} ; Inverted question mark
+return
